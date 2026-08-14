@@ -1,4 +1,7 @@
 import "./Project.css";
+// import instagram from "../assets/instagram.png";
+import Ecommerce from "../assets/Ecommerce.png";
+import Portfolio from "../assets/Portfolio.png";
 
 const project = [
   {
