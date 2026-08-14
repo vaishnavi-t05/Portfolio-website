@@ -12,7 +12,7 @@ const project = [
   },
   {
     title: "E-Commerce Website",
-    image: "/src/assets/Screenshot 2026-08-14 122804.png",
+    image: "src/assets/Ecommerce.png",
     description:
       "A modern e-commerce website with product listing, shopping cart, search, and responsive design.",
     tech: ["React", "Django", "MySQL"],
@@ -21,7 +21,7 @@ const project = [
   },
   {
     title: "Portfolio Website",
-    image: "src/assets/Screenshot 2026-08-14 123152.png",
+    image: "src/assets/Portfolio.png",
     description:
       "A modern animated portfolio showcasing my skills, projects, and contact information with beautiful UI.",
     tech: ["React", "CSS"],
