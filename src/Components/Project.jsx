@@ -1,12 +1,8 @@
 import "./Project.css";
-// import instagram from "../assets/instagram.png";
-import Ecommerce from "../assets/Ecommerce.png";
-import Portfolio from "../assets/Portfolio.png";
 
 const project = [
   {
     title: "Instagram Clone",
-    image: "/projects/instagram.png",
     description:
       "A responsive Instagram clone built with React and Firebase Authentication featuring stories, posts, likes, comments, and user authentication.",
     tech: ["React", "Firebase", "CSS"],
@@ -15,7 +11,6 @@ const project = [
   },
   {
     title: "E-Commerce Website",
-    image: "src/assets/Ecommerce.png",
     description:
       "A modern e-commerce website with product listing, shopping cart, search, and responsive design.",
     tech: ["React", "Django", "MySQL"],
@@ -24,7 +19,6 @@ const project = [
   },
   {
     title: "Portfolio Website",
-    image: "src/assets/Portfolio.png",
     description:
       "A modern animated portfolio showcasing my skills, projects, and contact information with beautiful UI.",
     tech: ["React", "CSS"],
@@ -48,12 +42,6 @@ const Project = () => {
           {project.map((project, index) => (
             <div className="project-card" key={index}>
 
-              <img
-                src={project.image}
-                alt={project.title}
-                className="project-image"
-              />
-
               <div className="project-content">
 
                 <h3>{project.title}</h3>
@@ -67,6 +55,7 @@ const Project = () => {
                 </div>
 
                 <div className="project-buttons">
+
                   <a
                     href={project.live}
                     target="_blank"
@@ -82,6 +71,7 @@ const Project = () => {
                   >
                     GitHub
                   </a>
+
                 </div>
 
               </div>
