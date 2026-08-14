@@ -13,7 +13,7 @@ const project = [
     title: "E-Commerce Website",
     description:
       "A modern e-commerce website with product listing, shopping cart, search, and responsive design.",
-    tech: ["React", "Django", "MySQL"],
+    tech: ["React", "css"],
     github: "https://github.com/vaishnavi-t05/Ecommerce",
     live: "https://ecommerce-website-five-nu.vercel.app",
   },
