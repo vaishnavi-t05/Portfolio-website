@@ -22,7 +22,7 @@ const project = [
     description:
       "A modern animated portfolio showcasing my skills, projects, and contact information with beautiful UI.",
     tech: ["React", "CSS"],
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/vaishnavi-t05/Portfolio-website",
     live: "https://your-portfolio.vercel.app",
   },
 ];

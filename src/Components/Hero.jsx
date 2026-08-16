@@ -52,7 +52,7 @@ export default function Hero() {
 
             <br />
 
-            Full Stack Developer
+           Fresher Full Stack Developer
           </h1>
 
           <p className="hero__description">
