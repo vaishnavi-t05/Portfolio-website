@@ -14,7 +14,6 @@ import {
   SiDjango,
   SiMysql,
   SiFirebase,
-  SiVisualstudiocode,
 } from "react-icons/si";
 
 const skillCategories = [
@@ -43,7 +42,6 @@ const skillCategories = [
       { name: "MySQL", icon: <SiMysql /> },
       { name: "SQLite", icon: <FaDatabase /> },
       { name: "Git", icon: <FaGitAlt /> },
-      { name:  "VScode", icon: <SiVisualstudiocode />},
     ],
   },
 ];
