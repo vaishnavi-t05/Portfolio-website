@@ -2,12 +2,12 @@ import "./Project.css";
 
 const project = [
   {
-    title: "Instagram Clone",
+    title: "Notes Application",
     description:
-      "A responsive Instagram clone built with React and Firebase Authentication featuring stories, posts, likes, comments, and user authentication.",
-    tech: ["React", "Firebase", "CSS"],
-    github: "https://github.com/yourusername/instagram-clone",
-    live: "https://your-instagram-clone.vercel.app",
+      "A full-stack Notes Application built with React and Django, featuring user authentication, creating, editing, deleting, and searching notes with secure API integration.",
+    tech: ["React.js", "HTML", "CSS","Django REST Framework","REST API","Postman"],
+    github: "https://github.com/vaishnavi-t05/Note",
+    live: "https://note-phi-dun.vercel.app/login",
   },
   {
     title: "E-Commerce Website",
