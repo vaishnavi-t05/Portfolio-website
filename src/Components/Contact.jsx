@@ -1,103 +1,139 @@
-import "./Contact.css";
+import './Contact.css';
 import {
   FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaLinkedin,
   FaGithub,
-} from "react-icons/fa";
+} from 'react-icons/fa';
+
+const details = [
+  {
+    icon: <FaEnvelope />,
+    label: 'email',
+    value: 'tvaishnavi2205@gmail.com',
+    href: 'mailto:tvaishnavi2205@gmail.com',
+  },
+  {
+    icon: <FaPhoneAlt />,
+    label: 'phone',
+    value: '+91 81110 38226',
+    href: 'tel:+918111038226',
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    label: 'based in',
+    value: 'Coimbatore, Tamil Nadu · IST',
+    href: null,
+  },
+];
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const name = data.get('name');
+    const email = data.get('email');
+    const subject = data.get('subject');
+    const message = data.get('message');
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:tvaishnavi2205@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${body}`;
+  };
+
   return (
     <section className="contact" id="contact">
-      <div className="contact-container">
+      <span className="contact__blob" aria-hidden="true" />
 
-        <div className="contact-heading">
-          <h2>Get In Touch</h2>
-          <p>
-            I'm currently looking for Full Stack Developer opportunities.
-            Feel free to contact me for internships, jobs, or collaborations.
-          </p>
-        </div>
+      <div className="container">
+        <span className="contact__tag">CONTACT ME</span>
 
-        <div className="contact-content">
+        <h2 className="contact__title serif">
+          Hey, let&apos;s work
+          <br />
+          together
+        </h2>
 
-          <div className="contact-info">
-
-            <div className="info-box">
-              <FaEnvelope className="icon" />
-              <div>
-                <h4>Email</h4>
-                <p>tvaishnavi2205@gmail.com</p>
-              </div>
-            </div>
-
-            <div className="info-box">
-              <FaPhoneAlt className="icon" />
-              <div>
-                <h4>Phone</h4>
-                <p>+91 8111038226</p>
-              </div>
-            </div>
-
-            <div className="info-box">
-              <FaMapMarkerAlt className="icon" />
-              <div>
-                <h4>Location</h4>
-                <p>Coimbatore, Tamil Nadu</p>
-              </div>
-            </div>
-
-            <div className="social-links">
+        <div className="contact__grid">
+          <div className="contact__cards">
+            {details.map((d) => (
               <a
-                href="https://github.com/vaishnavi-t05"
+                key={d.label}
+                className="contact__card"
+                href={d.href || undefined}
+                style={{ pointerEvents: d.href ? 'auto' : 'none' }}
+                aria-disabled={!d.href}
+              >
+                <span className="contact__card-icon" aria-hidden="true">
+                  {d.icon}
+                </span>
+                <span className="contact__card-body">
+                  <span className="contact__card-label mono">{d.label}</span>
+                  <span className="contact__card-value">{d.value}</span>
+                </span>
+              </a>
+            ))}
+
+            <div className="contact__social">
+              <span className="contact__social-title mono">or find me on</span>
+              <div className="contact__social-links">
+                <a
+                  href="https://github.com/vaishnavi-t05"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact__social-link mono"
+                >
+                  <FaGithub /> github ↗
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/vaishnavi2205/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact__social-link mono"
+                >
+                  <FaLinkedin /> linkedin ↗
+                </a>
+              </div>
+              <a
+                href="https://wa.me/918111038226"
                 target="_blank"
                 rel="noreferrer"
+                className="btn btn--light contact__whatsapp"
               >
-                <FaGithub />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/vaishnavi2205/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedin />
+                or WhatsApp me
               </a>
             </div>
-
           </div>
 
-          <form className="contact-form">
+          <form className="contact__form" onSubmit={handleSubmit}>
+            <div className="contact__form-grid">
+              <label className="contact__field">
+                <span className="contact__field-label mono">your name</span>
+                <input type="text" name="name" required />
+              </label>
 
-            <input
-              type="text"
-              placeholder="Your Name"
-            />
+              <label className="contact__field">
+                <span className="contact__field-label mono">your email</span>
+                <input type="email" name="email" required />
+              </label>
+            </div>
 
-            <input
-              type="email"
-              placeholder="Your Email"
-            />
+            <label className="contact__field">
+              <span className="contact__field-label mono">subject</span>
+              <input type="text" name="subject" required />
+            </label>
 
-            <input
-              type="text"
-              placeholder="Subject"
-            />
+            <label className="contact__field">
+              <span className="contact__field-label mono">your message</span>
+              <textarea name="message" rows="5" required />
+            </label>
 
-            <textarea
-              rows="6"
-              placeholder="Your Message"
-            ></textarea>
-
-            <button type="submit">
-              Send Message
+            <button type="submit" className="btn btn--light contact__submit">
+              Submit
             </button>
-
           </form>
-
         </div>
-
       </div>
     </section>
   );

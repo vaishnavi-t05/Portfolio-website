@@ -1,450 +1,130 @@
-/* ===========================
-   Google Font
-=========================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
-
-/* ===========================
-   Reset
-=========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Inter',sans-serif;
-    background:#FAF7F2;
-    color:#1D1D1F;
-    line-height:1.6;
-}
-
-img{
-    width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-ul{
-    list-style:none;
-}
-
-button{
-    border:none;
-    outline:none;
-    cursor:pointer;
-    background:none;
-}
-
-/* ===========================
-   Container
-=========================== */
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-/* ===========================
-   Header
-=========================== */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#FAF7F2;
-    border-bottom:1px solid #e6e6e6;
-    z-index:1000;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
-}
-
-.logo{
-    font-size:32px;
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-weight:700;
-}
-
-nav ul{
-    display:flex;
-    gap:35px;
-}
-
-nav ul li a{
-    color:#555;
-    font-weight:500;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#C08457;
-}
-
-/* ===========================
-   Hero Section
-=========================== */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
-    padding-top:100px;
-}
-
-.hero-text{
-    flex:1;
-}
-
-.hero-text span{
-    color:#C08457;
-    letter-spacing:2px;
-    font-size:14px;
-    text-transform:uppercase;
-}
-
-.hero-text h1{
-    margin-top:20px;
-    font-size:70px;
-    font-family:'Cormorant Garamond',serif;
-    line-height:1.1;
-}
-
-.hero-text h1 em{
-    color:#C08457;
-    font-style:italic;
-}
-
-.hero-text p{
-    margin:30px 0;
-    color:#666;
-    max-width:500px;
-    font-size:18px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-}
-
-.btn-dark{
-    background:#1D1D1F;
-    color:white;
-    padding:15px 35px;
-    border-radius:40px;
-    transition:.3s;
-}
-
-.btn-dark:hover{
-    background:#C08457;
-}
-
-.btn-outline{
-    border:1px solid #1D1D1F;
-    padding:15px 35px;
-    border-radius:40px;
-    transition:.3s;
-}
-
-.btn-outline:hover{
-    color:#C08457;
-    border-color:#C08457;
-}
-
-/* ===========================
-   Hero Image
-=========================== */
-
-.hero-image{
-    flex:1;
-    position:relative;
-}
-
-.hero-image img{
-    border-radius:25px;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.experience-box{
-    position:absolute;
-    bottom:-20px;
-    left:-20px;
-    background:white;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+main {
+  flex: 1;
 }
 
-.experience-box h2{
-    font-size:35px;
-    color:#C08457;
-    font-family:'Cormorant Garamond',serif;
-}
-
-/* ===========================
-   Responsive
-=========================== */
-
-@media(max-width:992px){
-
-.hero{
-
-flex-direction:column;
-text-align:center;
-
-}
-
-.hero-buttons{
-
-justify-content:center;
-
-}
-
-.hero-text p{
-
-margin:auto;
-margin-top:20px;
-margin-bottom:30px;
-
-}
-
-nav ul{
-
-display:none;
-
-}
-
-}
-/* ===================================
-   ABOUT SECTION
-=================================== */
-
-.about{
-    background:#1D1D1F;
-    color:#ffffff;
-    padding:100px 0;
-}
-
-.about-container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    gap:80px;
-    align-items:flex-start;
-}
-
-.about-left{
-    flex:1;
-}
-
-.about-left h4{
-    color:#C08457;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    margin-bottom:15px;
-}
+/* ============ SHARED SECTION HEAD ============ */
 
-.about-left h2{
-    font-size:55px;
-    font-family:'Cormorant Garamond',serif;
-    line-height:1.2;
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 58px;
 }
 
-.about-right{
-    flex:1;
+.section-head__num {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--coral);
+  white-space: nowrap;
 }
 
-.about-right p{
-    color:#d6d6d6;
-    margin-bottom:20px;
-    font-size:18px;
-    line-height:1.8;
+.section-head__rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  align-self: center;
 }
 
-/* ===================================
-   ABOUT STATS
-=================================== */
-
-.about-stats{
-    display:flex;
-    justify-content:space-between;
-    margin-top:40px;
-    gap:30px;
-}
-
-.stat-box{
-    flex:1;
-    border-top:1px solid rgba(255,255,255,.2);
-    padding-top:20px;
-}
-
-.stat-box h3{
-    font-size:42px;
-    color:#C08457;
-    font-family:'Cormorant Garamond',serif;
-}
-
-.stat-box p{
-    color:#bbbbbb;
-    font-size:15px;
-}
-
-/* ===================================
-   PROJECT SECTION
-=================================== */
-
-.projects{
-    padding:100px 0;
-    background:#FAF7F2;
-}
-
-.project-heading{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    margin-bottom:60px;
-}
-
-.project-heading h4{
-    color:#C08457;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    margin-bottom:10px;
-}
-
-.project-heading h2{
-    font-size:55px;
-    font-family:'Cormorant Garamond',serif;
-}
-
-.project-link{
-    color:#555;
-    font-weight:600;
-    transition:.3s;
-}
-
-.project-link:hover{
-    color:#C08457;
-}
-
-/* ===================================
-   PROJECT GRID
-=================================== */
-
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:35px;
-}
-
-.project-card{
-    background:#fff;
-    border-radius:25px;
-    overflow:hidden;
-    transition:.35s;
-    box-shadow:0 8px 20px rgba(0,0,0,.05);
+.section-head__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(38px, 4.4vw, 56px);
+  line-height: 1.03;
+  letter-spacing: -0.5px;
 }
 
-.project-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+.section-head__title em {
+  font-style: italic;
+  color: var(--coral);
 }
 
-.project-card img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    transition:.4s;
-}
+/* ============ SHARED BUTTONS ============ */
 
-.project-card:hover img{
-    transform:scale(1.08);
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 15px 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    background 0.18s ease, color 0.18s ease;
 }
 
-.project-content{
-    padding:25px;
+.btn--fill {
+  background: var(--ink);
+  color: var(--chalk);
+  box-shadow: 5px 5px 0 var(--coral);
 }
 
-.project-content h3{
-    font-size:28px;
-    font-family:'Cormorant Garamond',serif;
-    margin-bottom:8px;
+.btn--fill:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--coral);
 }
 
-.project-content small{
-    color:#777;
-    display:block;
-    margin-bottom:15px;
+.btn--ghost {
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
 }
 
-.project-content p{
-    color:#666;
-    line-height:1.8;
+.btn--ghost:hover {
+  background: var(--ink);
+  color: var(--chalk);
 }
 
-/* ===================================
-   PROJECT BADGE
-=================================== */
-
-.project-year{
-    background:#f4e5da;
-    color:#C08457;
-    padding:8px 15px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:600;
-    display:inline-block;
-    margin-top:15px;
+.btn--light {
+  background: var(--chalk);
+  color: var(--ink);
+  box-shadow: 5px 5px 0 var(--teal);
 }
-
-/* ===================================
-   RESPONSIVE
-=================================== */
 
-@media(max-width:992px){
-
-.about-container{
-    flex-direction:column;
+.btn--light:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--teal);
 }
 
-.about-left,
-.about-right{
-    width:100%;
+.btn--dark-ghost {
+  border: 1.5px solid var(--chalk);
+  color: var(--chalk);
+  background: transparent;
 }
 
-.about-stats{
-    flex-direction:column;
+.btn--dark-ghost:hover {
+  background: var(--chalk);
+  color: var(--ink);
 }
 
-.project-heading{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:20px;
+.btn--sm {
+  padding: 10px 17px;
+  font-size: 12px;
+  box-shadow: 3px 3px 0 var(--coral);
 }
 
-.project-grid{
-    grid-template-columns:1fr;
-}
+@media (max-width: 640px) {
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 42px;
+  }
 
+  .section-head__rule {
+    width: 100%;
+  }
 }
