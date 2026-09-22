@@ -1,13 +1,17 @@
 import './Project.css';
-import ecommerceShot from '../assets/Ecommerce.png';
-import portfolioShot from '../assets/Portfolio.png';
+import portfolioShot from '../assets/port1.jpg';
+import ecommerceShot from '../assets/cart.jpg';
+import notesShot from '../assets/notess.jpg';
+import instaShot from '../assets/insta.jpg';
 
 const projects = [
   {
     num: '01',
     name: 'Portfolio Website',
     shot: portfolioShot,
-    emoji: null,
+    pos: 'center top',
+    desc: 'A modern responsive portfolio showcasing my skills, projects and experience with smooth navigation and clean sections.',
+    tech: ['React', 'JavaScript', 'CSS'],
     live: 'https://portfolio-website-iota-seven-17.vercel.app/',
     github: 'https://github.com/vaishnavi-t05/Portfolio-website',
   },
@@ -15,23 +19,29 @@ const projects = [
     num: '02',
     name: 'Ecommerce Website',
     shot: ecommerceShot,
-    emoji: null,
+    pos: 'center top',
+    desc: 'A responsive storefront to browse products, manage wishlists and carts with search, filters and interactive sections.',
+    tech: ['React', 'JavaScript', 'CSS'],
     live: 'https://ecommerce-website-five-nu.vercel.app',
     github: 'https://github.com/vaishnavi-t05/Ecommerce',
   },
   {
     num: '03',
     name: 'Notes App',
-    shot: null,
-    emoji: '📝',
+    shot: notesShot,
+    pos: 'center',
+    desc: 'A full-stack notes manager with secure login and CRUD over REST APIs, built with a React frontend and Django backend.',
+    tech: ['React', 'Django REST', 'MySQL'],
     live: 'https://note-phi-dun.vercel.app/login',
     github: 'https://github.com/vaishnavi-t05/Note',
   },
   {
     num: '04',
     name: 'Instagram Clone',
-    shot: null,
-    emoji: '📸',
+    shot: instaShot,
+    pos: 'center 30%',
+    desc: 'A full-stack social clone with signup, posts, likes, stories and profiles using Firebase auth and dynamic feeds.',
+    tech: ['React', 'Firebase', 'CSS'],
     live: 'https://instagram-clone-self-seven.vercel.app/',
     github: 'https://github.com/vaishnavi-t05/instagram-clone',
   },
@@ -63,21 +73,26 @@ const Project = () => {
           {projects.map((p) => (
             <article className="proj-card" key={p.num}>
               <div className="proj-shot">
-                {p.shot ? (
-                  <img
-                    className="proj-shot__img"
-                    src={p.shot}
-                    alt={`${p.name} preview`}
-                    loading="lazy"
-                  />
-                ) : (
-                  <span className="proj-shot__emoji" aria-hidden="true">
-                    {p.emoji}
-                  </span>
-                )}
+                <img
+                  className="proj-shot__img"
+                  src={p.shot}
+                  alt={`${p.name} preview`}
+                  loading="lazy"
+                  style={{ objectPosition: p.pos }}
+                />
               </div>
 
               <h3 className="proj-name">{p.name}</h3>
+
+              <p className="proj-desc">{p.desc}</p>
+
+              <div className="proj-chips">
+                {p.tech.map((t) => (
+                  <span className="proj-chip mono" key={t}>
+                    {t}
+                  </span>
+                ))}
+              </div>
 
               <div className="proj-foot">
                 <a
