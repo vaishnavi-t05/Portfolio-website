@@ -143,6 +143,10 @@
     gap: 44px;
   }
 
+  .about__left {
+    transform: none;
+  }
+
   .section-head__rule-title {
     display: none;
   }
@@ -163,5 +167,24 @@
 
   .about__stat-value {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__eyebrow {
+    font-size: clamp(44px, 13vw, 52px);
+  }
+
+  .about__title {
+    font-size: clamp(32px, 8.5vw, 42px);
+  }
+
+  .about__text {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .about__stat {
+    padding: 22px 14px;
   }
 }

@@ -116,3 +116,18 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 56px 0 22px;
+  }
+
+  .footer__name {
+    font-size: 26px;
+  }
+
+  .footer__social a {
+    width: 42px;
+    height: 42px;
+  }
+}

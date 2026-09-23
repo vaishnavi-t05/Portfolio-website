@@ -199,6 +199,26 @@
   }
 }
 
+@media (max-width: 480px) {
+  .skills__title {
+    font-size: clamp(52px, 17vw, 64px);
+    letter-spacing: -2px;
+  }
+
+  .skills__sub {
+    font-size: 21px;
+  }
+
+  .stack {
+    gap: 22px;
+  }
+
+  .stack__chip {
+    font-size: 13.5px;
+    padding: 9px 14px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .stack__row--ltr,
   .stack__row--rtl {

@@ -246,3 +246,32 @@
     padding: 90px 0 100px;
   }
 }
+
+@media (max-width: 480px) {
+  .contact__title {
+    font-size: clamp(28px, 8.5vw, 32px);
+  }
+
+  .contact__tag {
+    font-size: 15px;
+  }
+
+  .contact__card {
+    padding: 15px 16px;
+    gap: 14px;
+  }
+
+  .contact__form {
+    padding: 22px 18px;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    font-size: 16px;
+  }
+
+  .contact__submit {
+    align-self: stretch;
+    justify-content: center;
+  }
+}

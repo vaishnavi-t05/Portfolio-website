@@ -197,3 +197,25 @@ a.nav__cta.btn {
     padding: 10px 0;
   }
 }
+
+@media (max-width: 480px) {
+  .nav__logo {
+    font-size: 22px;
+  }
+
+  .nav__logo-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+  }
+
+  .nav__cta,
+  a.nav__cta.btn {
+    font-size: 18px;
+    padding: 7px 16px;
+  }
+
+  .nav__overlay-inner {
+    gap: 32px;
+  }
+}
