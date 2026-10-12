@@ -80,11 +80,8 @@
 .proj-shot {
   border-radius: 12px;
   overflow: hidden;
-  aspect-ratio: 12 / 5;
+  aspect-ratio: 1917 / 912;
   background: linear-gradient(150deg, var(--teal), var(--coral-deep));
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .proj-shot__img {

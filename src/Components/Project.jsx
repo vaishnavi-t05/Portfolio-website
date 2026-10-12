@@ -1,8 +1,8 @@
 import './Project.css';
-import portfolioShot from '../assets/port1.jpg';
-import ecommerceShot from '../assets/cart.jpg';
-import notesShot from '../assets/notess.jpg';
-import instaShot from '../assets/insta.jpg';
+import portfolioShot from '../assets/porting.png';
+import ecommerceShot from '../assets/ecom.png';
+import notesShot from '../assets/noting.png';
+import instaShot from '../assets/ins.png';
 
 const projects = [
   {
@@ -39,7 +39,7 @@ const projects = [
     num: '04',
     name: 'Instagram Clone',
     shot: instaShot,
-    pos: 'center 30%',
+    pos: 'center top',
     desc: 'A full-stack social clone with signup, posts, likes, stories and profiles using Firebase auth and dynamic feeds.',
     tech: ['React', 'Firebase', 'CSS'],
     live: 'https://instagram-clone-self-seven.vercel.app/',

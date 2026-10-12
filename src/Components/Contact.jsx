@@ -129,10 +129,10 @@ const Contact = () => {
               <textarea name="message" rows="5" required />
             </label>
 
-            <button type="submit" className="btn btn--light contact__submit">
-              Submit
-            </button>
-          </form>
+              <button type="submit" className="btn btn--light contact__submit">
+                Submit
+              </button>
+            </form>
         </div>
       </div>
     </section>
